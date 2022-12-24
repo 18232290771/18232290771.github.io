@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<h2 id="扒鸡屁股"><a href="#扒鸡屁股" class="headerlink" title="扒鸡屁股"></a><center>扒鸡屁股</center></h2><h2 id="倒点酱油"><a href="#倒点酱油" class="headerlink" title="倒点酱油"></a><center>倒点酱油</center></h2><h2 id="饭点别犯愁"><a href="#饭点别犯愁" class="headerlink" title="饭点别犯愁"></a><center>饭点别犯愁</center></h2>]]></content>
       
       
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -23,6 +29,12 @@
       
         <content type="html"><![CDATA[<h1 id="Markdown入门日记"><a href="#Markdown入门日记" class="headerlink" title="Markdown入门日记"></a>Markdown入门日记</h1><h2 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块"></a>1.代码块</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iosteram&gt;</span><br><span class="line"><span class="keyword">using</span> namepace std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="2-标题语法"><a href="#2-标题语法" class="headerlink" title="2.标题语法"></a>2.标题语法</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.字体"></a>3.字体</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**abcde**   #字体加粗</span><br><span class="line">~~abcde~~   #删除</span><br><span class="line">*abcde*     #斜体</span><br><span class="line">***abcd***  #粗体</span><br></pre></td></tr></table></figure><p><strong>abcde</strong>   #字体加粗<br><del>abcde</del>   #删除<br><em>abcde</em>     #斜体<br><em><strong>abcd</strong></em>  #粗体</p><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;abcd</span><br><span class="line">&gt;&gt;abcd</span><br></pre></td></tr></table></figure><blockquote><p>abcd</p><blockquote><p>abcd</p></blockquote></blockquote><h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5.分割线"></a>5.分割线</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure><hr><hr><h2 id="6-插入图片"><a href="#6-插入图片" class="headerlink" title="6.插入图片"></a>6.插入图片</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![名称](地址)</span><br></pre></td></tr></table></figure><p><img src="http://p1.qhimg.com/bdr/__85/t01a43701d07df28985.jpg"></p><h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[名称](地址)</span><br></pre></td></tr></table></figure><p><a href="https://www.bilibili.com/">哔哩哔哩</a></p><h2 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h2><table><thead><tr><th>a</th><th>aaa</th><th>a</th></tr></thead><tbody><tr><td>b</td><td>bbb</td><td>b</td></tr><tr><td>c</td><td>ccc</td><td>c</td></tr><tr><td>d</td><td>ddd</td><td>b</td></tr></tbody></table>]]></content>
       
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
       
       
     </entry>
