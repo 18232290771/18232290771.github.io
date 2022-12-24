@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-/* 一级菜单居中 */
+/* 菜单居中 */
 #nav .menus_items {
     position: absolute !important;
     width: fit-content !important;
@@ -19,6 +19,8 @@
     left: -30px;
   }
 
+
+  /* 字体 */
   @font-face {
     /* 为载入的字体取名字(随意) */
     font-family: 'WT';	
@@ -32,6 +34,8 @@
     font-display: block;
   }
 
+
+  /* 界面样式 38-116 */
   :root {
     --trans-light: rgba(255, 255, 255, 0.88);
     --trans-dark: rgba(25, 25, 25, 0.88);
@@ -110,3 +114,8 @@
     background: rgba(25, 25, 25, 0.9) !important;
     color: #ffffff;
   }
+
+
+
+/* 图标 */
+@import "//at.alicdn.com/t/c/font_3837876_bvq6md60att.css";
