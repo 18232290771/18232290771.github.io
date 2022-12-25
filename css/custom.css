@@ -3,6 +3,38 @@
     margin: auto;
 }
 
+
+/* 图标 */
+@import "//at.alicdn.com/t/c/font_3837876_bvq6md60att.css";
+.icon-HOME:before{
+  font-size: 1.2em;
+}
+.icon-guidang:before{
+  font-size: 1.2em;
+}
+.icon-iconkuozhan_fenleipre:before{
+  font-size: 1.2em;
+}
+.icon-checklist:before{
+  font-size: 1.2em;
+}
+.icon-yinlehe:before{
+  font-size: 1.2em;
+}
+.icon-dianying_1:before{
+  font-size: 1.2em;
+}
+.icon-lianjie:before{
+  font-size: 1.2em;
+}
+.icon-guanyu1:before{
+  font-size: 1.2em;
+}
+.icon-liuyanmoban:before{
+  font-size: 1.2em;
+}
+
+
 /* 菜单居中 */
 #nav .menus_items {
     position: absolute !important;
@@ -35,7 +67,7 @@
   }
 
 
-  /* 界面样式 38-116 */
+  /* 界面样式透明 38-116 */
   :root {
     --trans-light: rgba(255, 255, 255, 0.88);
     --trans-dark: rgba(25, 25, 25, 0.88);
@@ -117,8 +149,7 @@
 
 
 
-/* 图标 */
-@import "//at.alicdn.com/t/c/font_3837876_bvq6md60att.css";
+
 
 
 /* 小冰分类分类磁铁黑夜模式适配 */
@@ -148,4 +179,29 @@
   height: 86%;
   left: 0;
   top: 0;
+}
+
+/* 一图流153-176 */
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
 }
