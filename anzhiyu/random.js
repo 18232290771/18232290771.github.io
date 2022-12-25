@@ -1,1 +1,0 @@
-var posts=["2022/12/24/不好笑/","2022/10/10/Markdown入门日记/","2022/12/23/扒鸡屁股/","2022/12/24/测试1/","2022/12/24/测试2/","2022/12/24/测试3/","2022/12/24/测试4/","2022/10/09/滕王阁序/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
