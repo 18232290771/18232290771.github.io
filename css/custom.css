@@ -6,6 +6,8 @@
 
 /* 图标 */
 @import "//at.alicdn.com/t/c/font_3837876_bvq6md60att.css";
+
+/* 图标大小，妈的，全局引用失败，只能单个引用，两行的代码生写成了20行，妈的*/
 .icon-HOME:before{
   font-size: 1.2em;
 }
