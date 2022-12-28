@@ -1,6 +1,6 @@
 // 动态心跳，更改自己的名称
 $(document).ready(function(e){
-    $('.copyright').html('©2020 - 2022 By WangTao🥝');
+    $('.copyright').html('©2020 - 2022 By Yae Miko🥝');
 })
 
 $(document).ready(function(e){
