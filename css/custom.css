@@ -5,35 +5,35 @@
 
 
 /* 图标 */
-@import "//at.alicdn.com/t/c/font_3837876_bvq6md60att.css";
+@import "//at.alicdn.com/t/c/font_3837876_zy6knx4mu2b.css";
 
 /* 图标大小，妈的，全局引用失败，只能单个引用，两行的代码生写成了20行，妈的*/
 .icon-HOME:before{
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
-.icon-guidang:before{
-  font-size: 1.3em;
+.icon-dangan:before{
+  font-size: 1.2em;
 }
-.icon-iconkuozhan_fenleipre:before{
-  font-size: 1.3em;
+.icon-fenlei2:before{
+  font-size: 1.2em;
 }
 .icon-checklist:before{
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
-.icon-yinlehe:before{
-  font-size: 1.3em;
+.icon-yinle1:before{
+  font-size: 1.2em;
 }
-.icon-dianying_1:before{
-  font-size: 1.3em;
+.icon-shipin:before{
+  font-size: 1.2em;
 }
-.icon-lianjie:before{
-  font-size: 1.3em;
+.icon-lianjie3:before{
+  font-size: 1.2em;
 }
 .icon-guanyu1:before{
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .icon-liuyanmoban:before{
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 
