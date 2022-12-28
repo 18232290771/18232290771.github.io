@@ -8,7 +8,7 @@ var OriginTitle = document.title;
      }
      else {
          $('[rel="icon"]').attr('href', "/favicon.ico");
-         document.title = '捉到你啦~🍻';
+         document.title = '🍻捉到你啦~';
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
          }, 2000);
