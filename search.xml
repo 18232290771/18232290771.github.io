@@ -118,9 +118,9 @@
     
     
     <entry>
-      <title>测试2</title>
-      <link href="/2022/12/24/%E6%B5%8B%E8%AF%952/"/>
-      <url>/2022/12/24/%E6%B5%8B%E8%AF%952/</url>
+      <title>测试3</title>
+      <link href="/2022/12/24/%E6%B5%8B%E8%AF%953/"/>
+      <url>/2022/12/24/%E6%B5%8B%E8%AF%953/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -137,9 +137,9 @@
     
     
     <entry>
-      <title>测试3</title>
-      <link href="/2022/12/24/%E6%B5%8B%E8%AF%953/"/>
-      <url>/2022/12/24/%E6%B5%8B%E8%AF%953/</url>
+      <title>测试2</title>
+      <link href="/2022/12/24/%E6%B5%8B%E8%AF%952/"/>
+      <url>/2022/12/24/%E6%B5%8B%E8%AF%952/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -166,25 +166,6 @@
       <categories>
           
           <category> 笔记 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo+Github个人博客搭建</title>
-      <link href="/2022/10/10/Hexo+Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-      <url>/2022/10/10/Hexo+Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-      
-        <content type="html"><![CDATA[<h2 id="一、安装所需工具"><a href="#一、安装所需工具" class="headerlink" title="一、安装所需工具"></a>一、安装所需工具</h2><h3 id="1、安装并配置Node-js"><a href="#1、安装并配置Node-js" class="headerlink" title="1、安装并配置Node.js"></a>1、安装并配置Node.js</h3><p>【它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。】</p><blockquote><p>Node.js下载：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a><br> Node.js安装：<a href="https://blog.csdn.net/weixin_52799373/article/details/123840137">https://blog.csdn.net/weixin_52799373/article/details/123840137</a></p></blockquote><h3 id="2、安装并配置Git"><a href="#2、安装并配置Git" class="headerlink" title="2、安装并配置Git"></a>2、安装并配置Git</h3><blockquote><p>Git下载：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>Git安装：<a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">https://www.cnblogs.com/xueweisuoyong/p/11914045.html</a></p></blockquote><h3 id="3、安装编辑器VSCode"><a href="#3、安装编辑器VSCode" class="headerlink" title="3、安装编辑器VSCode"></a>3、安装编辑器VSCode</h3><blockquote><p>VSCode下载：<a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a><br> VSCode安装：<a href="https://blog.csdn.net/weixin_43928112/article/details/125813377">https://blog.csdn.net/weixin_43928112/article/details/125813377</a></p></blockquote><h2 id="二、搭建Github仓库"><a href="#二、搭建Github仓库" class="headerlink" title="二、搭建Github仓库"></a>二、搭建Github仓库</h2><h3 id="1、注册Github"><a href="#1、注册Github" class="headerlink" title="1、注册Github"></a>1、注册Github</h3><h3 id="2、创建仓库"><a href="#2、创建仓库" class="headerlink" title="2、创建仓库"></a>2、创建仓库</h3><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQIqY.png" alt=""><br><img src="https://www.helloimg.com/images/2022/10/13/ZgQ7hE.png" alt="image-20221013134945154"></p><h2 id="三、生成SSH-Keys"><a href="#三、生成SSH-Keys" class="headerlink" title="三、生成SSH Keys"></a>三、生成SSH Keys</h2><h3 id="1、生成ssh"><a href="#1、生成ssh" class="headerlink" title="1、生成ssh"></a>1、生成ssh</h3><p>随便一个文件夹，右键 <code>Git Bash Here</code></p><p>输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</span><br></pre></td></tr></table></figure><p>四次回车</p><h3 id="2、添加密钥"><a href="#2、添加密钥" class="headerlink" title="2、添加密钥"></a>2、添加密钥</h3><p>找到秘钥位置并复制</p><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQf0R.jpg" alt="image-20221013134945154"><br><img src="https://www.helloimg.com/images/2022/10/13/ZgpAjv.jpg" alt="image-20221013134945154"><br><img src="https://www.helloimg.com/images/2022/10/13/ZgQuxA.jpg" alt="image-20221013134945154"><br><img src="https://www.helloimg.com/images/2022/10/13/ZgQhhz.jpg" alt="image-20221013134945154"></p><h3 id="3、测试ssh是否绑定成功"><a href="#3、测试ssh是否绑定成功" class="headerlink" title="3、测试ssh是否绑定成功"></a>3、测试ssh是否绑定成功</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><h2 id="四、本地生成博客"><a href="#四、本地生成博客" class="headerlink" title="四、本地生成博客"></a>四、本地生成博客</h2><h3 id="1、新建存放博客的文件夹"><a href="#1、新建存放博客的文件夹" class="headerlink" title="1、新建存放博客的文件夹"></a>1、新建存放博客的文件夹</h3><p>进入文件夹， 右键 <code>Git Bash Here</code></p><h3 id="2、安装hexo"><a href="#2、安装hexo" class="headerlink" title="2、安装hexo"></a>2、安装hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo </span><br></pre></td></tr></table></figure><h3 id="3、初始化"><a href="#3、初始化" class="headerlink" title="3、初始化"></a>3、初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><h3 id="4、启动hexo"><a href="#4、启动hexo" class="headerlink" title="4、启动hexo"></a>4、启动hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><h3 id="5、本地访问"><a href="#5、本地访问" class="headerlink" title="5、本地访问"></a>5、本地访问</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/</span><br></pre></td></tr></table></figure><p><img src="https://www.helloimg.com/images/2022/10/13/ZgpCam.webp" alt="image-20221013134945154"></p><h2 id="五、上传到Github"><a href="#五、上传到Github" class="headerlink" title="五、上传到Github"></a>五、上传到Github</h2><h3 id="1、修改-config-yml文件"><a href="#1、修改-config-yml文件" class="headerlink" title="1、修改-config.yml文件"></a>1、修改-config.yml文件</h3><p><img src="https://www.helloimg.com/images/2022/10/13/ZgpGHh.jpg" alt="image-20221013134945154"><br><img src="https://www.helloimg.com/images/2022/10/13/Zgpaj1.jpg" alt="image-20221013134945154"></p><p>将图片上位置修改为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: 你的github地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p><code>注意冒号后面的空格</code></p><h3 id="2、安装hexo-deployer-git-自动部署发布工具"><a href="#2、安装hexo-deployer-git-自动部署发布工具" class="headerlink" title="2、安装hexo-deployer-git 自动部署发布工具"></a>2、安装hexo-deployer-git 自动部署发布工具</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="3、生成页面"><a href="#3、生成页面" class="headerlink" title="3、生成页面"></a>3、生成页面</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><h3 id="4、本地文件上传到Github上面"><a href="#4、本地文件上传到Github上面" class="headerlink" title="4、本地文件上传到Github上面"></a>4、本地文件上传到Github上面</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><h3 id="5、访问GitHub博客"><a href="#5、访问GitHub博客" class="headerlink" title="5、访问GitHub博客"></a>5、访问GitHub博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://18232290771.github.io/</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 主题魔改教程 </category>
           
       </categories>
       
