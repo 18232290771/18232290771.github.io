@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>主题魔改教程汇总1</title>
+      <link href="/2022/12/29/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB1/"/>
+      <url>/2022/12/29/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="白头搔更短，浑欲不胜簪。"><a href="#白头搔更短，浑欲不胜簪。" class="headerlink" title="白头搔更短，浑欲不胜簪。"></a>白头搔更短，浑欲不胜簪。</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 主题魔改教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown外挂标签写法汇总</title>
       <link href="/2022/12/28/Markdown%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE%E5%86%99%E6%B3%95%E6%B1%87%E6%80%BB/"/>
       <url>/2022/12/28/Markdown%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE%E5%86%99%E6%B3%95%E6%B1%87%E6%80%BB/</url>
@@ -13,7 +32,26 @@
       
       <categories>
           
-          <category> 教程 </category>
+          <category> Markdown教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>主题魔改教程汇总2</title>
+      <link href="/2022/12/28/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB2/"/>
+      <url>/2022/12/28/%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 主题魔改教程 </category>
           
       </categories>
       
@@ -24,15 +62,15 @@
     
     <entry>
       <title>Markdown自带语法汇总</title>
-      <link href="/2022/12/28/Markdown%E8%87%AA%E5%B8%A6%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/"/>
-      <url>/2022/12/28/Markdown%E8%87%AA%E5%B8%A6%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/</url>
+      <link href="/2022/12/27/Markdown%E8%87%AA%E5%B8%A6%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/"/>
+      <url>/2022/12/27/Markdown%E8%87%AA%E5%B8%A6%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB/</url>
       
         <content type="html"><![CDATA[<h1 id="Markdown自带语法汇总"><a href="#Markdown自带语法汇总" class="headerlink" title="Markdown自带语法汇总"></a>Markdown自带语法汇总</h1><h2 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块"></a>1.代码块</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\<span class="code">```代码内容</span></span><br><span class="line"><span class="code">include&lt;iosteram&gt;</span></span><br><span class="line"><span class="code">using namepace std;</span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">&#123;</span></span><br><span class="line"><span class="code">    return 0</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">\```</span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iosteram&gt;</span><br><span class="line"><span class="keyword">using</span> namepace std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="2-标题语法"><a href="#2-标题语法" class="headerlink" title="2.标题语法"></a>2.标题语法</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p>见文章标题</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.字体"></a>3.字体</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**abcde**</span>   #字体加粗</span><br><span class="line">~~abcde~~   #删除</span><br><span class="line"><span class="emphasis">*abcde*</span>     #斜体</span><br><span class="line"><span class="strong">**<span class="emphasis">*abcde*</span>**</span> #粗体</span><br><span class="line"><span class="code">`abcde`</span>     #高亮</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><strong>abcde</strong>   #字体加粗<br><del>abcde</del>   #删除<br><em>abcde</em>     #斜体<br><strong><em>abcde</em></strong> #粗体<br><code>abcde</code>     #高亮</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;abcd</span><br><span class="line">&gt;&gt;abcd</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><blockquote><p>abcd</p><blockquote><p>abcd</p></blockquote></blockquote><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5.分割线"></a>5.分割线</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><hr><hr><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="6-插入图片"><a href="#6-插入图片" class="headerlink" title="6.插入图片"></a>6.插入图片</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">名称</span>](<span class="link">地址</span>)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><img src="http://p1.qhimg.com/bdr/__85/t01a43701d07df28985.jpg" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">名称</span>](<span class="link">地址</span>)</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><a href="https://www.bilibili.com/">哔哩哔哩</a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| a    | aaa  | a    |</span><br><span class="line">| ---- | ---- | ---- |</span><br><span class="line">| b    | bbb  | b    |</span><br><span class="line">| c    | ccc  | c    |</span><br><span class="line">| d    | ddd  | b    |</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><div class="table-container"><table><thead><tr><th>a</th><th>aaa</th><th>a</th></tr></thead><tbody><tr><td>b</td><td>bbb</td><td>b</td></tr><tr><td>c</td><td>ccc</td><td>c</td></tr><tr><td>d</td><td>ddd</td><td>b</td></tr></tbody></table></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="9-列表"><a href="#9-列表" class="headerlink" title="9.列表"></a>9.列表</h2><h3 id="9-1有序列表"><a href="#9-1有序列表" class="headerlink" title="9.1有序列表"></a>9.1有序列表</h3><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 注意后面有空格</span></span><br><span class="line"><span class="bullet">1.</span> </span><br><span class="line"><span class="bullet">2.</span> </span><br><span class="line"><span class="bullet">3.</span> </span><br><span class="line"><span class="bullet">4.</span> </span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><ol><li></li><li></li><li></li><li></li></ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h3 id="9-2无序列表"><a href="#9-2无序列表" class="headerlink" title="9.2无序列表"></a>9.2无序列表</h3><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">参数配置</button></li><li class="tab"><button type="button" data-href="#test1-2">渲染演示</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span> Java</span><br><span class="line"><span class="bullet">*</span> Python</span><br><span class="line"><span class="bullet">*</span> ...</span><br><span class="line"></span><br><span class="line"><span class="bullet">+</span> Java</span><br><span class="line"><span class="bullet">+</span> Python</span><br><span class="line"><span class="bullet">+</span> ...</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> Java</span><br><span class="line"><span class="bullet">-</span> Python</span><br><span class="line"><span class="bullet">-</span> ...</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><ul><li>Java</li><li>Python</li><li>…</li></ul><ul><li>Java</li><li>Python</li><li>…</li></ul><ul><li>Java</li><li>Python</li><li>…</li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
       
       
       <categories>
           
-          <category> 教程 </category>
+          <category> Markdown教程 </category>
           
       </categories>
       
@@ -51,26 +89,7 @@
       
       <categories>
           
-          <category> 游戏 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试2</title>
-      <link href="/2022/12/24/%E6%B5%8B%E8%AF%952/"/>
-      <url>/2022/12/24/%E6%B5%8B%E8%AF%952/</url>
-      
-        <content type="html"><![CDATA[<h3 id="感时花溅泪，恨别鸟惊心。"><a href="#感时花溅泪，恨别鸟惊心。" class="headerlink" title="感时花溅泪，恨别鸟惊心。"></a>感时花溅泪，恨别鸟惊心。</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
+          <category> 笔记 </category>
           
       </categories>
       
@@ -84,7 +103,7 @@
       <link href="/2022/12/24/%E6%B5%8B%E8%AF%951/"/>
       <url>/2022/12/24/%E6%B5%8B%E8%AF%951/</url>
       
-        <content type="html"><![CDATA[<h3 id="国破山河在，城春草木深。"><a href="#国破山河在，城春草木深。" class="headerlink" title="国破山河在，城春草木深。"></a>国破山河在，城春草木深。</h3>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -99,30 +118,11 @@
     
     
     <entry>
-      <title>测试4</title>
-      <link href="/2022/12/24/%E6%B5%8B%E8%AF%954/"/>
-      <url>/2022/12/24/%E6%B5%8B%E8%AF%954/</url>
+      <title>测试2</title>
+      <link href="/2022/12/24/%E6%B5%8B%E8%AF%952/"/>
+      <url>/2022/12/24/%E6%B5%8B%E8%AF%952/</url>
       
-        <content type="html"><![CDATA[<h3 id="白头搔更短，浑欲不胜簪。"><a href="#白头搔更短，浑欲不胜簪。" class="headerlink" title="白头搔更短，浑欲不胜簪。"></a>白头搔更短，浑欲不胜簪。</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试5</title>
-      <link href="/2022/12/24/%E6%B5%8B%E8%AF%955/"/>
-      <url>/2022/12/24/%E6%B5%8B%E8%AF%955/</url>
-      
-        <content type="html"><![CDATA[<h3 id="白头搔更短，浑欲不胜簪。"><a href="#白头搔更短，浑欲不胜簪。" class="headerlink" title="白头搔更短，浑欲不胜簪。"></a>白头搔更短，浑欲不胜簪。</h3>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -141,7 +141,7 @@
       <link href="/2022/12/24/%E6%B5%8B%E8%AF%953/"/>
       <url>/2022/12/24/%E6%B5%8B%E8%AF%953/</url>
       
-        <content type="html"><![CDATA[<h3 id="烽火连三月，家书抵万金。"><a href="#烽火连三月，家书抵万金。" class="headerlink" title="烽火连三月，家书抵万金。"></a>烽火连三月，家书抵万金。</h3>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -165,7 +165,26 @@
       
       <categories>
           
-          <category> 游戏 </category>
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+Github个人博客搭建</title>
+      <link href="/2022/10/10/Hexo+Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/10/10/Hexo+Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、安装所需工具"><a href="#一、安装所需工具" class="headerlink" title="一、安装所需工具"></a>一、安装所需工具</h2><h3 id="1、安装并配置Node-js"><a href="#1、安装并配置Node-js" class="headerlink" title="1、安装并配置Node.js"></a>1、安装并配置Node.js</h3><p>【它让JavaScript成为与PHP、Python、Perl、Ruby等服务端语言平起平坐的脚本语言。】</p><blockquote><p>Node.js下载：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p><p>Node.js安装：<a href="https://blog.csdn.net/weixin_52799373/article/details/123840137">https://blog.csdn.net/weixin_52799373/article/details/123840137</a></p></blockquote><h3 id="2、安装并配置Git"><a href="#2、安装并配置Git" class="headerlink" title="2、安装并配置Git"></a>2、安装并配置Git</h3><blockquote><p>Git下载：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p><p>Git安装：<a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">https://www.cnblogs.com/xueweisuoyong/p/11914045.html</a></p></blockquote><h3 id="3、安装编辑器VSCode"><a href="#3、安装编辑器VSCode" class="headerlink" title="3、安装编辑器VSCode"></a>3、安装编辑器VSCode</h3><blockquote><p>VSCode下载：<a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p><p>VSCode安装：<a href="https://blog.csdn.net/weixin_43928112/article/details/125813377">https://blog.csdn.net/weixin_43928112/article/details/125813377</a></p></blockquote><h2 id="二、搭建Github仓库"><a href="#二、搭建Github仓库" class="headerlink" title="二、搭建Github仓库"></a>二、搭建Github仓库</h2><h3 id="1、注册Github"><a href="#1、注册Github" class="headerlink" title="1、注册Github"></a>1、注册Github</h3><h3 id="2、创建仓库"><a href="#2、创建仓库" class="headerlink" title="2、创建仓库"></a>2、创建仓库</h3><blockquote><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQIqY.png" alt=""></p><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQ7hE.png" alt="image-20221013134945154"></p></blockquote><h2 id="三、生成SSH-Keys"><a href="#三、生成SSH-Keys" class="headerlink" title="三、生成SSH Keys"></a>三、生成SSH Keys</h2><h3 id="1、生成ssh"><a href="#1、生成ssh" class="headerlink" title="1、生成ssh"></a>1、生成ssh</h3><p>随便一个文件夹，右键 <code>Git Bash Here</code></p><p>输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</span><br></pre></td></tr></table></figure><p>四次回车</p><h3 id="2、添加密钥"><a href="#2、添加密钥" class="headerlink" title="2、添加密钥"></a>2、添加密钥</h3><p>找到秘钥位置并复制</p><blockquote><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQf0R.jpg" alt="image-20221013134945154"></p><p><img src="https://www.helloimg.com/images/2022/10/13/ZgpAjv.jpg" alt="image-20221013134945154"></p><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQuxA.jpg" alt="image-20221013134945154"></p><p><img src="https://www.helloimg.com/images/2022/10/13/ZgQhhz.jpg" alt="image-20221013134945154"></p></blockquote><h3 id="3、测试ssh是否绑定成功"><a href="#3、测试ssh是否绑定成功" class="headerlink" title="3、测试ssh是否绑定成功"></a>3、测试ssh是否绑定成功</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><h2 id="四、本地生成博客"><a href="#四、本地生成博客" class="headerlink" title="四、本地生成博客"></a>四、本地生成博客</h2><h3 id="1、新建存放博客的文件夹"><a href="#1、新建存放博客的文件夹" class="headerlink" title="1、新建存放博客的文件夹"></a>1、新建存放博客的文件夹</h3><p>进入文件夹， 右键 <code>Git Bash Here</code></p><h3 id="2、安装hexo"><a href="#2、安装hexo" class="headerlink" title="2、安装hexo"></a>2、安装hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo </span><br></pre></td></tr></table></figure><h3 id="3、初始化"><a href="#3、初始化" class="headerlink" title="3、初始化"></a>3、初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><h3 id="4、启动hexo"><a href="#4、启动hexo" class="headerlink" title="4、启动hexo"></a>4、启动hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><h3 id="5、本地访问"><a href="#5、本地访问" class="headerlink" title="5、本地访问"></a>5、本地访问</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/</span><br></pre></td></tr></table></figure><blockquote><p><img src="https://www.helloimg.com/images/2022/10/13/ZgpCam.webp" alt="image-20221013134945154"></p></blockquote><h2 id="五、上传到Github"><a href="#五、上传到Github" class="headerlink" title="五、上传到Github"></a>五、上传到Github</h2><h3 id="1、修改-config-yml文件"><a href="#1、修改-config-yml文件" class="headerlink" title="1、修改-config.yml文件"></a>1、修改-config.yml文件</h3><blockquote><p><img src="https://www.helloimg.com/images/2022/10/13/ZgpGHh.jpg" alt="image-20221013134945154"></p><p><img src="https://www.helloimg.com/images/2022/10/13/Zgpaj1.jpg" alt="image-20221013134945154"></p></blockquote><p>将图片上位置修改为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: 你的github地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p><code>注意冒号后面的空格</code></p><h3 id="2、安装hexo-deployer-git-自动部署发布工具"><a href="#2、安装hexo-deployer-git-自动部署发布工具" class="headerlink" title="2、安装hexo-deployer-git 自动部署发布工具"></a>2、安装hexo-deployer-git 自动部署发布工具</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="3、生成页面"><a href="#3、生成页面" class="headerlink" title="3、生成页面"></a>3、生成页面</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><h3 id="4、本地文件上传到Github上面"><a href="#4、本地文件上传到Github上面" class="headerlink" title="4、本地文件上传到Github上面"></a>4、本地文件上传到Github上面</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><h3 id="5、访问GitHub博客"><a href="#5、访问GitHub博客" class="headerlink" title="5、访问GitHub博客"></a>5、访问GitHub博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://18232290771.github.io/</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 主题魔改教程 </category>
           
       </categories>
       
