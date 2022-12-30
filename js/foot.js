@@ -1,6 +1,6 @@
 // 动态心跳，更改自己的名称
 $(document).ready(function(e){
-    $('.copyright').html('©2020 - 2022 By Yae Miko🥝');
+    $('.copyright').html('©2022 By Yae Miko');
 })
 
 $(document).ready(function(e){
@@ -9,7 +9,7 @@ $(document).ready(function(e){
 
 //本站运行时间，更改自己建立站点的时间
 function show_date_time(){
-$('.framework-info').html('小站已经安全运行<span id="span_dt_dt" style="color: #fff;"></span>');
+$('.framework-info').html('小站居然运行了<span id="span_dt_dt" style="color: #fff;"></span>');
 window.setTimeout("show_date_time()", 1000);
 BirthDay=new Date("12/14/2022 0:0:0");
 today=new Date();
