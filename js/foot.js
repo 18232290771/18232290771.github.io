@@ -24,5 +24,5 @@ hrsold=Math.floor(e_hrsold);
 e_minsold=(e_hrsold-hrsold)*60;
 minsold=Math.floor((e_hrsold-hrsold)*60);
 seconds=Math.floor((e_minsold-minsold)*60);
-span_dt_dt.innerHTML='<font style=color:#22DDB8>'+daysold+'</font> 天 <font style=color:#22DDB8>'+hrsold+'</font> 时 <font style=color:#22DDB8>'+minsold+'</font> 分 <font style=color:#22DDB8>'+seconds+'</font> 秒';
+span_dt_dt.innerHTML='<font style=color:white>'+daysold+'</font> 天 <font style=color:white>'+hrsold+'</font> 时 <font style=color:white>'+minsold+'</font> 分 <font style=color:white>'+seconds+'</font> 秒';
 }
