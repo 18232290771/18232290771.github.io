@@ -81,7 +81,7 @@
   #recent-posts > .recent-post-item {
     background: var(--trans-light);
     backdrop-filter: var(--backdrop-filter);
-    border-radius: 20px;
+    border-radius: 18px;
     border: var(--border-style);
   }
   
