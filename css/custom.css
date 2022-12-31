@@ -596,3 +596,15 @@ h6::before {
   -ms-transform: scale(0.5);
   -o-transform: scale(0.5);
 }
+
+
+/* 夜间模式菜单栏发光字 */
+[data-theme="dark"] #nav .site-page,
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
+  text-shadow: 0 0 2px rgb(111, 230, 224) !important;
+}
+
+/* 手机端适配 */
+[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
+  text-shadow: 0 0 2px rgb(111, 230, 224) !important;
+}
