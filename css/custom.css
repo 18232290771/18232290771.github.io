@@ -608,3 +608,56 @@ h6::before {
 [data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
   text-shadow: 0 0 2px rgb(111, 230, 224) !important;
 }
+
+
+
+/* 卡片border */
+
+/* 卡片border */
+
+/* 卡片border */
+:root {
+  /* 主题 */
+  --blockquote-color: #333;
+  /* --global-font-size: 16px; */
+  --card-bg: rgba(255, 255, 255, .6);
+  /* 自定义 */
+  --leonus-purple: #4976f5;
+  --leonus-border: 1px solid #e0e3ed;
+}
+/* 卡片border */
+
+#sta_chart,
+#statistic .item,
+.search-dialog,
+#container,
+#sta_chart,
+#statistic .item,
+#bber-talk,
+#post .post-copyright,
+.cardHover,
+.error404 #error-wrap .error-content,
+.layout>div:first-child:not(.recent-posts),
+#recent-posts>.recent-post-item,
+#aside-content .card-widget {
+    border-radius: 12px;
+    box-shadow: none;
+    border: var(--leonus-border);
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+
+#sta_chart:hover,
+#statistic .item:hover,
+.search-dialog,
+#container,
+#bber-talk:hover,
+#post .post-copyright:hover,
+.cardHover:hover,
+.error404 #error-wrap .error-content:hover,
+.layout>div:first-child:not(.recent-posts):hover,
+#recent-posts>.recent-post-item:hover,
+#aside-content .card-widget:hover {
+    border-color: var(--leonus-purple);
+    box-shadow: none;
+}
