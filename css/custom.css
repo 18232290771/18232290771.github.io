@@ -81,7 +81,7 @@
   #recent-posts > .recent-post-item {
     background: var(--trans-light);
     backdrop-filter: var(--backdrop-filter);
-    border-radius: 18px;
+    border-radius: 10px;
     border: var(--border-style);
   }
   
@@ -89,7 +89,7 @@
   #aside-content .card-widget {
     background: var(--trans-light);
     backdrop-filter: var(--backdrop-filter);
-    border-radius: 18px;
+    border-radius: 10px;
     border: var(--border-style);
   }
   
@@ -100,7 +100,7 @@
     background: var(--trans-light);
     backdrop-filter: var(--backdrop-filter);
     border: var(--border-style);
-    border-radius: 20px;
+    border-radius: 10px;
   }
   
   /* 导航栏 */
@@ -313,7 +313,7 @@ h6::before {
   animation: ccc 6s linear infinite;
 }
 
-/* 侧边栏个人信息卡片动态渐变色 */
+/* 侧边栏个人信息卡片动态渐变色
 #aside-content > .card-widget.card-info {
   background: linear-gradient(
     62deg, #8EC5FC 0%, #E0C3FC 100%
@@ -359,6 +359,7 @@ h6::before {
     background-position: 0% 50%;
   }
 }
+*/
 
 /* 黑夜模式适配 */
 [data-theme="dark"] #aside-content > .card-widget.card-info {
@@ -611,53 +612,3 @@ h6::before {
 
 
 
-/* 卡片border */
-
-/* 卡片border */
-
-/* 卡片border */
-:root {
-  /* 主题 */
-  --blockquote-color: #333;
-  /* --global-font-size: 16px; */
-  --card-bg: rgba(255, 255, 255, .6);
-  /* 自定义 */
-  --leonus-purple: #4976f5;
-  --leonus-border: 1px solid #e0e3ed;
-}
-/* 卡片border */
-
-#sta_chart,
-#statistic .item,
-.search-dialog,
-#container,
-#sta_chart,
-#statistic .item,
-#bber-talk,
-#post .post-copyright,
-.cardHover,
-.error404 #error-wrap .error-content,
-.layout>div:first-child:not(.recent-posts),
-#recent-posts>.recent-post-item,
-#aside-content .card-widget {
-    border-radius: 12px;
-    box-shadow: none;
-    border: var(--leonus-border);
-    box-sizing: border-box;
-    transition: all .3s ease-in-out;
-}
-
-#sta_chart:hover,
-#statistic .item:hover,
-.search-dialog,
-#container,
-#bber-talk:hover,
-#post .post-copyright:hover,
-.cardHover:hover,
-.error404 #error-wrap .error-content:hover,
-.layout>div:first-child:not(.recent-posts):hover,
-#recent-posts>.recent-post-item:hover,
-#aside-content .card-widget:hover {
-    border-color: var(--leonus-purple);
-    box-shadow: none;
-}
