@@ -5,7 +5,7 @@
 
 
 /* 图标 */
-@import "//at.alicdn.com/t/c/font_3837876_zy6knx4mu2b.css";
+@import "//at.alicdn.com/t/c/font_3837876_zbmwjt3eteg.css";
 
 /* 图标大小，妈的，全局引用失败，只能单个引用，两行的代码生写成了20行，妈的*/
 .icon-HOME:before{
@@ -35,7 +35,12 @@
 .icon-liuyanmoban:before{
   font-size: 1.2em;
 }
-
+.icon-weixin:before{
+  font-size: 1.2em;
+}
+.icon-youxiang:before{
+  font-size: 1.1em;
+}
 
 /* 菜单居中 */
 #nav .menus_items {
