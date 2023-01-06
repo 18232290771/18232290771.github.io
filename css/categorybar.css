@@ -15,11 +15,11 @@ li.categoryBar-list-item {
   padding: 25px 0 25px 25px !important;
   box-shadow: rgba(50,50,50,0.3) 50px 50px 50px 50px inset;
   overflow: hidden;
-  background-size: 120% !important;
+  background-size: 150% !important;
   background-position: center !important;
 }
 li.categoryBar-list-item:hover {
-  background-size: 120% !important;
+  background-size: 150% !important;
   box-shadow: inset 500px 50px 50px 50px rgba(50,50,50,0.6);
 }
 li.categoryBar-list-item:hover span.categoryBar-list-descr {
