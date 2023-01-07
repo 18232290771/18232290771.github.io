@@ -4142,7 +4142,7 @@ h1.page-title + .tag-cloud-list {
 .post-reward .reward-button {
   display: inline-block;
   padding: 0.2rem 1.2rem;
-  background: var(--btn-bg);
+  background: #3eb8be;
   color: var(--btn-color);
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
