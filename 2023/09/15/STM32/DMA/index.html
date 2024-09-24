@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DMA笔记 | 无线进步</title><meta name="author" content="WangTao"><meta name="copyright" content="WangTao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、DMA（一）简介 DMA (Direct Memory Access)直 接存储器存取 DMA可以提供外设和存储器或者存储器和存储器之间的高速数据传输，无须CPU干预，节省了CPU的资源 12个独立可配置的通道: DMA1 (7个通道)，DMA2 (5个通道)，每个通道都支持软件触发（存储器间的）和特定的硬件触发（外设到存储器间）。  STM32F103C8T6 DMA资源：DMA1 (7个通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DMA笔记">
+<meta property="og:url" content="http://example.com/2023/09/15/STM32/DMA/index.html">
+<meta property="og:site_name" content="无线进步">
+<meta property="og:description" content="一、DMA（一）简介 DMA (Direct Memory Access)直 接存储器存取 DMA可以提供外设和存储器或者存储器和存储器之间的高速数据传输，无须CPU干预，节省了CPU的资源 12个独立可配置的通道: DMA1 (7个通道)，DMA2 (5个通道)，每个通道都支持软件触发（存储器间的）和特定的硬件触发（外设到存储器间）。  STM32F103C8T6 DMA资源：DMA1 (7个通">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2023-09-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-24T09:00:01.382Z">
+<meta property="article:author" content="WangTao">
+<meta property="article:tag" content="STM32">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/63aa8d0308b683016356202d.png"><link rel="canonical" href="http://example.com/2023/09/15/STM32/DMA/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DMA笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-24 17:00:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="无线进步"><span class="site-name">无线进步</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DMA笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-14T16:00:00.000Z" title="发表于 2023-09-15 00:00:00">2023-09-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-24T09:00:01.382Z" title="更新于 2024-09-24 17:00:01">2024-09-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/STM32/">STM32</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DMA笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、DMA"><a href="#一、DMA" class="headerlink" title="一、DMA"></a>一、DMA</h1><h2 id="（一）简介"><a href="#（一）简介" class="headerlink" title="（一）简介"></a>（一）简介</h2><ul>
+<li>DMA (Direct Memory Access)直 接存储器存取</li>
+<li>DMA可以提供<strong>外设和存储器</strong>或者<strong>存储器和存储器之间</strong>的高速数据传输，无须CPU干预，节省了CPU的资源</li>
+<li>12个独立可配置的通道: DMA1 (7个通道)，DMA2 (5个通道)，每个通道都支持<strong>软件触发（</strong>存储器间的<strong>）</strong>和特定的<strong>硬件触发（</strong>外设到存储器间<strong>）。</strong></li>
+</ul>
+<p>STM32F103C8T6 DMA资源：DMA1 (7个通道)</p>
+<h3 id="存储器映像"><a href="#存储器映像" class="headerlink" title="存储器映像"></a>存储器映像</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712107505812-2f601682-a3d5-4076-b891-cd36a15ffe6c.png" alt="img"></p>
+<ul>
+<li><strong>计算机组成部分：</strong>运算器，控制器，存储器，输入输出设备</li>
+<li>CPU：运算器，控制器</li>
+<li>存储器：主要是存储器的<strong>内容和地址</strong></li>
+<li>ROM：只读存储器，掉电不丢失数据</li>
+<li>RAM：随机存储器，掉电丢失数据</li>
+</ul>
+<p>其中系统存储器数据为厂家固定的启动加载程序，不修改。选项字节，在下载的时候可以不刷新其内容，保持不变，主要存的是flash读写保护、看门狗等配置。</p>
+<h2 id="（二）原理"><a href="#（二）原理" class="headerlink" title="（二）原理"></a>（二）原理</h2><h3 id="1、DMA框图"><a href="#1、DMA框图" class="headerlink" title="1、DMA框图"></a>1、DMA框图</h3><p>看成CPU+存储器两大部分</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712109601594-1ce66ff7-b4c3-47d9-9323-b25bc4f461fb.png" alt="img"></p>
+<p><strong>寄存器：</strong>是一种特殊存储器，一方面可以和存储器一样读写内容，另一方面，寄存器每一位背后都连接了一根导线，可以用于控制外设的状态。因此<strong>寄存器是连接软件和硬件的桥梁</strong>。软件读写寄存器从而控制硬件执行。即<strong>外设是寄存器，寄存器就是存储器</strong>。</p>
+<p>如上图可看到DMA有三个，以太网DMA是自带的不用理会，剩下的DMA1和DMA2只要配置转移数据的源地址和目标地址就可以各自独立的工作了。其中有个<strong>仲裁器</strong>，这是因为虽然多个通道可以独立转运数据，但是DMA总线只有一条，因此只能分时复用这一条DMA总线，如果产生了冲突会使用仲裁器。另外再总线矩阵里也有一个仲裁器，如果DMA和CPU同时访问目标，<strong>那么DMA就会暂停CPU的访问，</strong>防止冲突，<strong>此时仲裁器执行循环调度，以保证CPU至少可以得到一般的系统总线（存储器或外设）带宽</strong>。</p>
+<p><strong>AHB从设备：</strong>DMA作为外设的寄存器，其连接在AHB总线上。所以DMA即是总线矩阵的主动单元，可以读写各种存储器，也是AHB总线上的被动单元，CPU通过这一条路线，就可以对DMA进行<strong>参数配置</strong>了。</p>
+<p><strong>DMA请求：</strong>由触发源（外设）发起，即<strong>DMA的硬件触发源</strong>。收到请求后之后DMA就可以进行数据转运了。</p>
+<p>其中Flash是ROM，只读存储器的一种，如果通过CPU或者DMA都是<strong>只能读取，不能写入</strong>，因此不能用作DMA目的地址。想要写入需要配置这个Flash接口控制器，对Flash进行写入，流程比较麻烦。SRAM可以随意读写，外设寄存器需要参考手册描述，一般数据寄存器可以正常读写。</p>
+<h3 id="2、DMA基本结构"><a href="#2、DMA基本结构" class="headerlink" title="2、DMA基本结构"></a>2、DMA基本结构</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712111265782-4c7045f5-3258-43f8-afea-31da91ede92e.png" alt="img"></p>
+<p>外设存储器地址可以是别的，也可以是自身相对的地址。</p>
+<p>当传输计数器等于0时，且没有启动重装时，无论是否触发，DMA是不会运转的。此时只能先关闭DMA（<strong>必须</strong>），再对传输计数器写入一个大于0的值。</p>
+<h3 id="3、DMA请求"><a href="#3、DMA请求" class="headerlink" title="3、DMA请求"></a>3、DMA请求</h3><p>即DMA出发部分</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712112938203-61423ed1-9fcd-4ac5-af75-3e0b074115a0.png" alt="img"><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712112975748-3d33f399-fe64-459b-bedc-54944cdeb026.png" alt="img"></p>
+<p>图中EN位表示通道是否工作；M2M位&#x3D;1时候选择软件触发。</p>
+<p>软件触发是任意的，而<strong>每个通道的硬件触发源不同</strong>，需要注意。</p>
+<h3 id="4、数据宽度与对齐"><a href="#4、数据宽度与对齐" class="headerlink" title="4、数据宽度与对齐"></a>4、数据宽度与对齐</h3><p><strong>作用：</strong>每个数据转运的站点都有数据宽度的参数描述，如果宽度一样，就正常处理，如果不一样就会使用到如下表格。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712113416229-a75a68f1-8351-475d-b225-8b162e2cebd3.png" alt="img"></p>
+<p>即，当数据宽度不统一时候，（小转大）可以在高位补0&#x2F;（大转小）把多出来的高位舍弃掉不写入。传输数目是搬了4个数据，B1、B2等是数据，其&#x2F;前面的是地址。</p>
+<h3 id="5、数据转运操作描述"><a href="#5、数据转运操作描述" class="headerlink" title="5、数据转运操作描述"></a>5、数据转运操作描述</h3><p><strong>传输方向：</strong>存储器——存储器</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712114042786-77f9c3fb-749a-4df0-84b6-00ec4eac5f03.png" alt="img">转运规定的次数7后，传输计数器自减到0，DMA停止，转运完成。转运是<strong>复制转运</strong>，DataA[x]的数据并不会消失，会一直有数据。</p>
+<p><strong>传输方向：</strong>外设——存储器</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/25954489/1712114330453-3d827308-3779-4a39-b59c-14ec38c87a17.png" alt="img"></p>
+<p>触发一次AD，7个通道依次进行转换，再每个通道转换完成后，进行一次DMA数据转运，并且目的地址自行自增，这样就不会覆盖了。</p>
+<p>即<strong>DMA配置：</strong>外设地址写ADC_DR寄存器地址，不自增；存储器地址可以自行创建数组来使用（<strong>注意数据寄存器的宽度</strong>，设置为一致），并且设置<strong>自增</strong>。转运计数器为7，<strong>代表转运次数</strong>。</p>
+<p>计数器是否重装，可以看ADC配置，<strong>如果是单次扫描，DMA的传输计数器可以不自动重装；如果是连续扫描，那DMA就可以使用自动重装，</strong>在ADC启动下一轮转换的时候，DMA也启动下一轮转运。</p>
+<p>ADC_DR的值是在ADC单个通道转换完成后才会有效，因此DMA转运时机，需要和ADC单个通道转换完成同步。所以DMA的触发选择要选<strong>ADC的硬件触发</strong>。</p>
+<p>因为ADC转换完成后没有任何标志位，也不会触发中断，所以不好判断某个通道转换完成的时机。根据视频老师的实践，虽然<strong>单个ADC通道</strong>转换完成后不产生标志位和中断，<strong>但是应该会产生DMA请求去触发DMA搬运</strong>。ADC+DMA弥补了ADC数据覆盖的缺陷，天作之合。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">WangTao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/09/15/STM32/DMA/">http://example.com/2023/09/15/STM32/DMA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">无线进步</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/STM32/">STM32</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/09/20/STM32/USART/" title="USART笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">USART笔记</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/10/STM32/ADC/" title="ADC笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ADC笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/09/10/STM32/ADC/" title="ADC笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-10</div><div class="title">ADC笔记</div></div></a></div><div><a href="/2023/10/10/STM32/BKP%E5%A4%87%E4%BB%BD&RTC%E5%AE%9E%E6%97%B6%E6%97%B6%E9%92%9F/" title="BKP备份&amp;RTC实时时钟笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-10</div><div class="title">BKP备份&amp;RTC实时时钟笔记</div></div></a></div><div><a href="/2023/11/02/STM32/Flash%E9%97%AA%E5%AD%98/" title="Flash闪存笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-02</div><div class="title">Flash闪存笔记</div></div></a></div><div><a href="/2023/09/05/STM32/PWM/" title="PWM笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-05</div><div class="title">PWM笔记</div></div></a></div><div><a href="/2023/10/02/STM32/SPI/" title="SPI笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-02</div><div class="title">SPI笔记</div></div></a></div><div><a href="/2023/09/10/STM32/GPIO/" title="GPIO笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-10</div><div class="title">GPIO笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">WangTao</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/18232290771"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/18232290771" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/449096702" target="_blank" title="Bilibili"><i class="fab fa-youtube" style="color: #24292e;"></i></a><a class="social-icon" href="https://pic.imgdb.cn/item/66f0ca68f21886ccc03a5df7.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">无限进步！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81DMA"><span class="toc-number">1.</span> <span class="toc-text">一、DMA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">（一）简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%83%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">存储器映像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">（二）原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81DMA%E6%A1%86%E5%9B%BE"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、DMA框图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81DMA%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.2.</span> <span class="toc-text">2、DMA基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81DMA%E8%AF%B7%E6%B1%82"><span class="toc-number">1.2.3.</span> <span class="toc-text">3、DMA请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%95%B0%E6%8D%AE%E5%AE%BD%E5%BA%A6%E4%B8%8E%E5%AF%B9%E9%BD%90"><span class="toc-number">1.2.4.</span> <span class="toc-text">4、数据宽度与对齐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%95%B0%E6%8D%AE%E8%BD%AC%E8%BF%90%E6%93%8D%E4%BD%9C%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">5、数据转运操作描述</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By WangTao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
