@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C语言笔记 | 无限进步</title><meta name="author" content="WangTao"><meta name="copyright" content="WangTao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、从源代码到exe知识点： 从源代码到exe要经过五个时期，分别为预处理期、编译期、汇编期、连接期和执行期。在预处理期，就是程序员在编写代码的过程。编译期中编译器将源代码变为汇编语言，汇编语言是计算机语言的助记符号。汇编期中汇编器将汇编语言变为机器语言.obj，也就是计算机能够识别的01指令，机器最终执行的就是机器语言.obj，也称为目标文件。连接期就是将库函数（头文件）与所有的机器语言进行打包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言笔记">
+<meta property="og:url" content="http://example.com/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/index.html">
+<meta property="og:site_name" content="无限进步">
+<meta property="og:description" content="一、从源代码到exe知识点： 从源代码到exe要经过五个时期，分别为预处理期、编译期、汇编期、连接期和执行期。在预处理期，就是程序员在编写代码的过程。编译期中编译器将源代码变为汇编语言，汇编语言是计算机语言的助记符号。汇编期中汇编器将汇编语言变为机器语言.obj，也就是计算机能够识别的01指令，机器最终执行的就是机器语言.obj，也称为目标文件。连接期就是将库函数（头文件）与所有的机器语言进行打包">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg">
+<meta property="article:published_time" content="2024-04-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-24T09:30:16.419Z">
+<meta property="article:author" content="WangTao">
+<meta property="article:tag" content="C语言">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "C语言笔记",
+  "url": "http://example.com/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/",
+  "image": "https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg",
+  "datePublished": "2024-04-09T16:00:00.000Z",
+  "dateModified": "2024-09-24T09:30:16.419Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "WangTao",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://pic.imgdb.cn/item/63aa8d0308b683016356202d.png"><link rel="canonical" href="http://example.com/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C语言笔记',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/Categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">无限进步</span></a><a class="nav-page-title" href="/"><span class="site-name">C语言笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/Categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">C语言笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-09T16:00:00.000Z" title="发表于 2024-04-10 00:00:00">2024-04-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-24T09:30:16.419Z" title="更新于 2024-09-24 17:30:16">2024-09-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">8.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>24分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="一、从源代码到exe"><a href="#一、从源代码到exe" class="headerlink" title="一、从源代码到exe"></a>一、从源代码到exe</h3><p>知识点：</p>
+<p>从源代码到exe要经过五个时期，分别为预处理期、编译期、汇编期、连接期和执行期。<br>在预处理期，就是程序员在编写代码的过程。编译期中编译器将源代码变为汇编语言，汇编语言是计算机语言的助记符号。汇编期中汇编器将汇编语言变为机器语言.obj，也就是计算机能够识别的01指令，机器最终执行的就是机器语言.obj，也称为目标文件。连接期就是将库函数（头文件）与所有的机器语言进行打包。最终在执行期将打包好的文件变为exe可执行文件。<br>如果出现语法错误，那就是在编译期出现了编译错误。<br>如果产生LNK连接错误就是在连接期出现了问题，可能是找不到头文件造成的，也可能是写错了main函数，或者在一个项目中没有或者出现多个main函数。</p>
+<h3 id="二、基本数据类型"><a href="#二、基本数据类型" class="headerlink" title="二、基本数据类型"></a>二、基本数据类型</h3><p> 知识点：</p>
+<p>基本数据类型可以分为整型、字符型和浮点型三大类，其中整型包括short,int,long,long long 4小类；字符型包括char一个小类；浮点型包括float,double,long double 3小类。<br>不同类型的字节数：char  1   short  2   int  4   long  4   long long  8   float  4   double  8   long double   8  单位都为字节。<br>整型与字符型的存储原理是定点存储，它是通过符号位和二进制数的补码来存储的；浮点型的存储原理为浮点存储，它是通过符号位、指数区和尾数区来存储的。<br>字面值常量的前缀，如果是八进制就在常量前加0，如果是十六进制就加0x，如果是二进制就加0b，十进制则不需要前缀。</p>
+<p>字面值的后缀，因为无符号的后缀为u，所以无符号的int类型后缀为u，正常int类型没有后缀，short类型没有后缀，long类型为l，无符号long类型为ul，long long类型为ll，无符号long long类型为ull，char无后缀。浮点型不区分有无符号，float类型为f，double没有后缀，long double为l，但一般用不到这个类型。</p>
+<h3 id="三、字符在屏幕上的显示原理"><a href="#三、字符在屏幕上的显示原理" class="headerlink" title="三、字符在屏幕上的显示原理"></a>三、字符在屏幕上的显示原理</h3><p>知识点：</p>
+<p>字符型的本质是整型，他的字节数为1个字节，它属于定点存储，是8位的二进制数。<br>字符型常量如果是以影像或者八进制、十六进制的方式表达，那么需要在常量边上加上单引号’’，如果是以十进制表达，那么就直接写上对应的十进制ASCII码值即可。<br>转义字符的作用：例如\n可以进行换行，\t可以自动制表，如果想输出\，那么需要在它的前面再加上一个\，还有许多类似的转义字符。<br>字符编码表的规律可以进行字母大小写的转换，因为相同字母的大小写ASCII码值相差32，多以对大写字母+32可以得到对应的小写字母；当然，对小写字母-32可以得到大写字母。如果想要将整型的数字变为字符型，那么在数字后+’0’即可，例如7+’0’&#x3D;’7’，反之对字符型的数字-‘0’可以得到整型数字。</p>
+<h3 id="四、溢出现象"><a href="#四、溢出现象" class="headerlink" title="四、溢出现象"></a>四、溢出现象</h3><p>溢出现象中有这么几个问题：</p>
+<p>-1的二进制为什么全1？<br>答：char类型的-1的原码为1000 0001，因为计算机在存储时存的是补码，所以要对除符号位之外的二进制进行取反变为反码1111 1110，在对其进行+1变为补码1111 1111。</p>
+<p>什么是整型的溢出现象？<br>答：以图中这个短整型为例，-1的二进制存储为16个1，在加1的过程中会不断进位变为17位的二进制1 0000 0000 ……，但短整型只能存储16个二进制位，那么最前面的1就会出现溢出舍弃，称这个现象位溢出现象。</p>
+<p>为什么有符号整型最大值+1反而是最小值？<br>答：我们知道，有符号的短整型最大值的二进制除符号位为0其他位都为1，对其进行+1就变为符号位为1其他位都为0，因为符号位为1是负数，并且此时为补码，要还原为原码就要对其取反再+1，先取反变为16个1，不看符号位，他的10进制为32767，再+1就是32768，最后补上符号就是最小值-32768。</p>
+<h3 id="五、类型转换规律"><a href="#五、类型转换规律" class="headerlink" title="五、类型转换规律"></a>五、类型转换规律</h3><p> 知识点：</p>
+<p>基本数据类型转换包括两种方式一个是自动类型转换，一个是强制类型转换。<br>在自动类型转换中，如果计算时的存储方式相同，那么字节少的会向字节多的存储；如果是定点存储与浮点存储混合，那么会议浮点存储为主；如果是有符号与无符号混合，有符号的会存储到无符号的。<br>强制类型转换就是人为的将数据转换为其他数据类型，例如(double)7,就是将int类型的7转换为double类型。</p>
+<h3 id="六、短路问题"><a href="#六、短路问题" class="headerlink" title="六、短路问题"></a>六、短路问题</h3><p> 知识点：</p>
+<p>逻辑与（&amp;&amp;）的运算特点为：有假则假、全真则真。<br>逻辑或（||）的运算特点为：有真则真、全假则假。<br>短路问题：在逻辑与运算中，利用了它有假则假的特点，计算机会对前面的式子进行判定，如果他是假的，那么计算机会判定整个逻辑为假，就不会继续对后面的表达式进行运算和判定了。逻辑或也是一样，如果前面的式子为真，那么不会再进行后续的运算，就像短路一样，所以称这种问题为短路问题。</p>
+<h3 id="七、指针变量类型的作用"><a href="#七、指针变量类型的作用" class="headerlink" title="七、指针变量类型的作用"></a>七、指针变量类型的作用</h3><p> 知识点：</p>
+<p>指针变量的内存空间大小与操作系统的位数有关。如果是X86 32位操作系统，指针的空间大小为4个字节，如果是X64 64位操作系统，那么指针的空间大小为8个字节。<br>指针变量保留的是所指向空间的地址。<br>内存地址编号的特征：首先内存地址具有唯一性、连续性，且内存地址的编号从小到大。因为字节是最小的存储单位，所以每个字节都有自己的地址编号，在取地址时，取的是变量所占字节的最小地址编号，也就是首地址。<br>指针变量类型的两大作用：一是它决定了指针在得到空间使用权时空间的大小。二是在指针移动时，会根据指针变量的类型不同，移动的步伐也不同，如果是int类型指针，在移动一个单位时会移动四个字节；如果是short类型指针就会移动两个字节；如果是char类型指针就会移动一个字节。</p>
+<h3 id="八、指针类型的扩展——多级指针"><a href="#八、指针类型的扩展——多级指针" class="headerlink" title="八、指针类型的扩展——多级指针"></a>八、指针类型的扩展——多级指针</h3><p> 知识点：</p>
+<p>二级指针也称为指向指针的指针。也就是将指针找到的地址再次进行存储<br>多级指针如何得到真正的数据：就拿图中的二级指针为例，因为二级指针存放的是数据地址的地址，所以说对其进行<em>操作可以得到数据的地址，在对他进行</em>操作即可得到真正的数据了。其他的多级指针也是一样，是几级指针就对他进行几次*操作就可以得到真正的数据。<br>多级指针所占内存空间的大小：因为多级指针也是指针变量，所以它的内存空间只与操作系统的位数有关。所以说如果是X86 32位操作系统，则指针变量的内存空间为4个字节，如果是X64 64位操作系统，则指针变量的内存空间大小为8个字节。</p>
+<h3 id="九、指针类型的扩展——指针数组"><a href="#九、指针类型的扩展——指针数组" class="headerlink" title="九、指针类型的扩展——指针数组"></a>九、指针类型的扩展——指针数组</h3><p> 知识点：</p>
+<p>指针数组就是存放指针的数组。<br>指针数组的每个成员都是指针变量，存储的就是对应空间的地址。<br>如何使用指针数组访问数据：我们知道，指针就像是钥匙，那么指针数组就是存放多个钥匙的数组。要想访问期成员对应的数据其实很简单，就对那个成员进行<em>操作即可。例如图中所示，想要访问这个指针数组第三个成员指向的数据，对它进行</em>操作就可以得到对应的空间了。</p>
+<h3 id="十、指针类型的扩展——数组指针"><a href="#十、指针类型的扩展——数组指针" class="headerlink" title="十、指针类型的扩展——数组指针"></a>十、指针类型的扩展——数组指针</h3><p> 知识点：</p>
+<p>数组指针就是指向数组的指针，它属于是指针类型。<br>数组指针与基本类型指针的区别：在这个图片中，第一行就为基本类型的指针，不难看出，数组指针所指向的空间更大，再看后两行，前边为指针数组，后边为数组指针，因为如果<em>p不加括号，int就会先与</em>结合变为int型指针，再通过后边的方括号进行扩展，最终命名为怕，而数组指针是int与方括号结合成为数组，再通过<em>p指向它。<br>数组指针如何访问数组成员空间？<br>答：我们知道，p指向的是数组的地址，也就是取地址符加上数组名，那么</em>p就是对取地址后的数组名再<em>操作，因为&amp;与</em>为互逆操作，所以此时<em>p就等同于数组名，所以通过数组指针访问数组成员空间时，只要将数组名替换为</em>p即可。例如访问第三行第四列的成员空间正常来写就是 数组名[3][4];换成数组指针的写法就是(*p)[3][4]; 。</p>
+<h3 id="十一、一维数组-名-特性"><a href="#十一、一维数组-名-特性" class="headerlink" title="十一、一维数组-名-特性"></a>十一、一维数组-名-特性</h3><p>  先来看这张图，我们定义了一个一维数组，在这个数组中，他的数组名本质上就是个地址，是这个数组的首地址，我们也可以理解为这个数组第0个元素的地址，那么在这个地址上加上2意思就是向后移动两列，找到的就是这个数组第2各成员的地址。在这里有个公式 <em>(参考地址+偏移)&#x3D;&#x3D;参考地址[偏移] 讲的其实就是[]的计算过程，意思就是通过数组名找到第0列的地址，再向后偏移四位就找到了第4列的地址，然后通过</em>操作就可以得到他的空间。快捷方式就是 参考地址[偏移]。最后要说的是arr与&amp;arr的区别，虽然他们两个的值相同，但是代表的意义不同，arr代表的是数组第0列的地址，向后偏移1位找到的是第1列的地址，而&amp;arr找到的是这个数组的地址，向后偏移1位找到的就是数组后边的地址。</p>
+<p>知识点：</p>
+<p>数组的特征：长度固定、同类型、有编号。<br>数组名是数组整个存储空间的首地址，也是第0个元素的地址，他是一个地址常量，所以是不可以修改的。<br>[]是空间寻找的快捷方式，他的计算过程是：*(参考地址+偏移) 。</p>
+<h3 id="十二、二维数组-名-特性"><a href="#十二、二维数组-名-特性" class="headerlink" title="十二、二维数组-名-特性"></a>十二、二维数组-名-特性</h3><p> 在图中，我们定义了一个int类型的二维数组。在这个数组中，数组名找到的就是第0行的地址，所以我们在数组名上加1可以找到第1行的地址，再<em>操作就可以得到第一行的空间。在得到行空间的基础上想要得到这行中某一成员的空间，就要在这个行空间上加上偏移量，找到某一成员的地址，再</em>操作就可以得到成员的空间了。这其实就是二维数组寻找成员空间的计算过程，化简之后就变成了数组名[][]，前面是行后边是列。那么二维数组名取地址找到的就还是二维数组的地址，它加上1找到的就是二维数组后面的地址，并且*操作后得到的空间大小与二维数组的空间大小相等。</p>
+<p>知识点：</p>
+<p>二维数组是存储一维数组的一维数组。在书写两个[]时要遵循先行后列的原则。并且可以不写行数，计算机会根据列数与成员数量自动划分行数，但是列数一定要写。<br>二维数组名代表数组第0行的地址。<br>多维数组的空间访问原理？<br>答：我认为他就是一个嵌套寻找空间的过程，就是不断利用*(参考地址+偏移)这个公式来逐层寻找空间。如果是访问三维数组中某一成员的空间，那么就是三层嵌套，第一层先利用数组名加偏移找到某一个平面的地址，对他*操作后得到这个平面的空间，再利用这个空间加偏移找到这个平面中某一行的地址，<em>操作后得到这行的空间，最后利用得到的这个行空间加偏移找到某一个成员的地址，对整体</em>操作后就可以得到这个三维数组中某个成员的空间了。</p>
+<h3 id="十三、大端存储-小端存储"><a href="#十三、大端存储-小端存储" class="headerlink" title="十三、大端存储-小端存储"></a>十三、大端存储-小端存储</h3><p>  这里我们定义一个int类型的变量，他在内存中所占的空间为4个字节，因为内存中一般以16进制存储。我们知道，两个16进制就相当于8个2进制位，也就是1个字节，所以4个字节就i相当于8个16进制。所以这个9的16进制就是00 00 00 09.那么无论是大端存储还是小端存储，他的左边都是低地址，右边都是高地址。如果是大端存储，那么就是低地址存储高位，高地址存储低位，这与我们平时的思维很像，它通常用于数据传输，而小端存储则与其相反，它是低地址存储低位，高地址存储高位，通常用于内存存储。那么我们如何验证内存存储是否是小端存储呢？我们可以通过定义一个整型1，并且将它的地址强转成字符型指针，然后赋值给char类型的指针p，如果此时p指向的空间为1，则可以证明存储方式是小端存储。</p>
+<h3 id="十四、函数在源代码中的三种状态"><a href="#十四、函数在源代码中的三种状态" class="headerlink" title="十四、函数在源代码中的三种状态"></a>十四、函数在源代码中的三种状态</h3><p>  函数的三种状态包括声明状态，定义状态和调用状态、要定义一个函数，他首先需要有返回值类型，然后加上函数名和括号，括号中写上要定义的形参，再加上{}，最后在{}中写入流程结构。在声明函数时，就是将{}和其中的内容去掉，再加上；，如果函数没有进行前置声明，那么就会出现重定义的语法错误。再调用函数时，我们只需在（）中写入实参，就可以将实参传入形参，即可进行函数的调用。在我们自定义函数时，最佳的顺序就是先对我们设计好的函数进行声明，然后将调用函数写入到程序中，看逻辑是否正确，最后按照我们的需求对函数进行定义，书写函数的流程结构。</p>
+<h3 id="十五、堆区与栈区的区别"><a href="#十五、堆区与栈区的区别" class="headerlink" title="十五、堆区与栈区的区别"></a>十五、堆区与栈区的区别</h3><p> 知识点：</p>
+<p>内存区域通常分为5大区域，分别是存储函数的代码区，存储不变常量的常数区，存储全局变量和静态static变量的全局&#x2F;静态区，还有堆区和栈区。通常来讲，代码区是低地址的，栈区是高地址的。<br>一般临时性的局部变量会存放在栈区，在调用函数时会在栈中创建出临时变量，在执行完毕后会自动回收掉。一般更长久的变量会存放在堆区，并且需要手动回收。<br>从空间大小来看，堆区的空间较大，栈区的空间较小。生长方向他们是相向生长的。分配方式和管理方式：栈区是自动分配和自动回收的。而堆区是手动分配和手动回收的。从分配效率来看，栈区是在调用函数的时候直接自动分配出来的；而堆区是要执行malloc或calloc时分配的，也就相当于手动分配，所以栈区的效率更高。堆区可能会产生碎片，所以需要手动进行回收，而栈区则不会。<br>堆区如果不释放会产生碎片，在堆积到一定程度时可能会导致程序崩溃，所以我们通常会在栈区创建一个指针，来指向堆区中内容的地址。在使用后通过free指针来进行空间释放，并且要使指针指向空（NULL），避免后续的操作问题。</p>
+<h3 id="十六、函数的执行原理"><a href="#十六、函数的执行原理" class="headerlink" title="十六、函数的执行原理"></a>十六、函数的执行原理</h3><p> 图片知识点讲解：</p>
+<p>  从宏观来看，函数的执行就像阿拉丁神灯一样，在我们调用执行的时候他就会出现，执行完毕就会消失。</p>
+<p>  从微观来看，在我们执行一个程序时，main函数会首先入栈，之后调用哪个函数哪个函数就入栈，执行完毕后就会pop弹出。这里遵循一个先进后出，后进先出的原则。那么在调用函数时，我们会将局部变量（也就是形式参数和声明变量）存放在栈区，在函数结束调用后会自动回收。</p>
+<p>  函数名实际就是个地址， 也就是说他代表函数在代码区上的地址，既然是个地址，那么我们就可以创建一个指针来指向它、调用它。所以我们在栈区创建一个要指向函数类型的指针，并指向它，在这里我们要注意的是，我们在指向它时有两种方式，一种是显示方式：就是用p（指针）指向&amp;函数名，那么在调用时就要用(*p)(实参)来调用，另一种方式是隐式方式：也就是直接用指针指向函数名，那么在调用时则可以直接用指针加(实参)来调用。因为第二种方式比较简洁明了，所以在调用执行函数时我们通常选择隐式方式。</p>
+<h3 id="十七、枚举类型"><a href="#十七、枚举类型" class="headerlink" title="十七、枚举类型"></a>十七、枚举类型</h3><p> 枚举类型的全称是enumeration，我们在使用的时候就用enum，它是一种扩展类型，在这之前我们学习过数组，并且在以后还会学到struct结构体以及union联合体。enum可以对数据类型进行扩展，创建自定义的类型，但这个类型的值一定是固定有限的。比如生肖、血型或是方向。他的格式是enum 枚举名称 {内容1，内容2……};他在创建时，会默认给内容赋上编码，从0开始。我们也可以通过内容&#x3D;整数来手动编码，但编码本身无意义，只是为了增强可读性。在使用我们创建的类型时，格式为：enum 枚举名称 变量名 &#x3D; 值；enum最主要的功能就是增强代码的可读性。</p>
+<h3 id="十八、typedef"><a href="#十八、typedef" class="headerlink" title="十八、typedef"></a>十八、typedef</h3><p> type是类型的意思，define是定义，那么typedef就是对类型的重新命名，定义一个新的类型。他的基本格式是typedef+现有类型名+自定义名称。比如图中左侧，将COVID-19重命名为新“新冠”，但是无论是COVID-19还是新冠，指的都是同一种东西。那么我们要想对函数指针或数组指针重命名，我们只需在表达式前面加上typedef，并且将原来的变量名换成自定义名称即可。那么什么是嵌套定义呢，比如说我们先将int类型重定义为Integer，再将Integer重命名为Integer INT，然后还可以将Integer INT在重命名为INT MYint，但是无论多少次重命名，这些自定义类型的本质都是int类型。</p>
+<p>模板: typedef 现有类型名 自定义名称</p>
+<h3 id="二十、const"><a href="#二十、const" class="headerlink" title="二十、const"></a>二十、const</h3><p> const就像是一把锁，如果在定义时表达式前面加上了const，那么所定义的变量就会变为只读状态。在做项目时，我们如果不想让用户改变某个变量的值，那么我们就会在定义变量时加上const。const在指针上的用法有三种，如果在<em>和p前面都加上const，就相当于将指针锁住并且将它指向的地址也锁住，也就是指向不可改，内容也不可改。如果只在</em>前面加const，就是将指向的地址锁住，就是指向可改，内容不可改。要是只在p前面加上const，那么就是将指针锁住，但仍可以通过*p改变他指向的空间，也就是指向不可改，内容可改。</p>
+<p>作用：修饰一个变量使之成为常量。<br>要求：必须初始化。</p>
+<h3 id="二十一、全局-局部变量生命周期与作用域"><a href="#二十一、全局-局部变量生命周期与作用域" class="headerlink" title="二十一、全局&#x2F;局部变量生命周期与作用域"></a>二十一、全局&#x2F;局部变量生命周期与作用域</h3><p>   全局变量是在函数外定义的变量，它会被分配到全局&#x2F;静态区，它的作用域是整个项目内，在项目内任何位置都可以通过extern来对它进行引用，但切记不可以二次赋值，它的生命周期是整个项目 开始到结束。局部变量就是定义在函数内的变量，它会存放在栈区，它的生命周期是从函数入栈到弹出，作用域是所在函数内。当全局变量与局部变量重名时，不会出现重定义的语法错误，而是会将全局变量屏蔽，这里遵循一个临近原则。</p>
+<h3 id="二十二、static静态变量"><a href="#二十二、static静态变量" class="headerlink" title="二十二、static静态变量"></a>二十二、static静态变量</h3><p>  static所定义的是静态唯一变量，他所定义的变量会被存放在全局&#x2F;静态区。static变量的值只能初始化一次，如果未进行初始值，系统会自动为其赋值0。当我们在调用函数时，函数内的变量会随着执行结束弹出而被栈区自动回收掉，但如果定义的变量为static变量，他将不会被回收。所以他的生命周期是程序开始运行到结束。它的作用域是定义所在的位置，如果是在项目中定义，它的作用域就是整个项目；如果实在目标文件那么作用域就是所在目标文件；如果实在某个函数内定义，那作用域就是这个函数。比如说我们在定义一个全局变量时，在前面加上了static，使其成为了静态全局变量，那么他就是当前源代码的全局变量，不可以在其他源代码中通过extern来引用。</p>
+<p>  static 理解为局部内的 唯一变量 相当于全局，但全局不可访问</p>
+<h3 id="二十三、extern"><a href="#二十三、extern" class="headerlink" title="二十三、extern"></a>二十三、extern</h3><p>  extern就是外部变量链接，它用于声明来自外部的变量，它可以将全局&#x2F;静态区中的全局变量在外部进行声明，然后所声明的位置就可以使用被声明的变量了，在声明时要注意的是只能声明，不能赋值定义，否则就会出现重定义的语法错误。所以他的格式是extern 数据类型 变量名; 切记extern声明的变量不能赋值，有extern没赋值，有赋值没extern。</p>
+<h3 id="二十四、宏define"><a href="#二十四、宏define" class="headerlink" title="二十四、宏define"></a>二十四、宏define</h3><p>  define就是宏替换，宏是整体的意思，那么宏替换就是整体替换，它发生在预处理期，它有两种替换方式。一种是#define 宏名 替换内容，这是内容没有可变部位的方式，而如果内容中有可变的部位，他就是#define 宏名(可变部位) 内容模板，其中包括可变部位和不变内容，可变的一般为数组名或数据类型。它也可以进行宏的嵌套定义，将D替换为C，将C替换为B，再将B换成A。宏替换最大的意义也是增强代码的可读性。它是一个纯复制粘贴的过程，而typedef是真正的重新命名，定义了一个新的类型。</p>
+<h3 id="二十五、字符串原理"><a href="#二十五、字符串原理" class="headerlink" title="二十五、字符串原理"></a>二十五、字符串原理</h3><p>  首先来看字符，字符用char来表示，他代表1个字节的字符，只能表示ASCII码值，不能表示汉字字符，他的赋值方式可以是影像赋值，也可以是十进制、八进制或是十六进制的形式。它存储的是字符的编码，并以影像的方式呈现出来。</p>
+<p>  那么字符数组和字符串有什么区别呢？首先他们都是表示若干个字符的组合，但是字符串要有字符的结束标记’\0’，有了’\0’的字符数组才能叫作字符串，但是我们手动来赋’\0’太过于麻烦，所以我们在定义字符串时通常用” “来初始化，因为他会在字符串的结尾自动赋上’\0’（注意’\0’也会占一个字符空间），那么在初始化后我们将这个字符数组称之为字符串，将” “中的内容称之为字符串常量。只要是常量，就会放在常数区。在代码中，字符串常量可以理解为一个地址，就是字符串所在常量区的首地址。</p>
+<p>  由于str1[]是局部变量，所以会在栈区被创建，在初始化时，后面的字符串会被在常数区先创建出来，而后在栈区对其进行复制。p1和p2也在栈区被创建，由于Hello\0之前已经在常数区被创建出来了，所以p1、p2可以直接来指向Hello\0。</p>
+<p>  在这里面，我们尤其要搞懂哪些值是常量，先来看左下角这几个bug出在哪里。由于p1和p2是指向常数区的地址，所以用指针当作数组名不可以对他的成员进行更改，只可以改变指针的指向，这里就像const *p一样，指针的指向可改而指向的内容不可以改。下面这个错误是因为str1是数组名，而我们知道数组名是地址常量，并且右面的内容是字符串常量，将一个常量赋给另一个常量，会出现左值不可更改的错误。但是由于str1创建的字符串是在栈区内，所以它的成员的值是可以被修改的。</p>
+<h3 id="二十六、struct与union结构体联合体"><a href="#二十六、struct与union结构体联合体" class="headerlink" title="二十六、struct与union结构体联合体"></a>二十六、struct与union结构体联合体</h3><p>扩展类型包括我们学过的数组和enum枚举类型还有即将要学的struct结构体和union联合体。<br>struct与union的区别？<br>答：struct是存储多个类型对象的内存块，并且这些对象不重叠。而union是一块内存，他的大小等于数据对象最大的空间大小，他的对象会重叠，因此在任何时候只能存储一个数据对象。struct占用的内存大小等于所有成员占用的内存总和，而union占用的内存大小等于他成员占用最大的内存大小。</p>
+<p>结构体对齐补齐指什么及意义？<br>答：在结构体创建时会有一个对齐不齐的准则，他会选出所使用的数据类型中字节数最大的类型作为标准，并以它的字节数为一个单位，在创建空间时，如果某类型小于单位剩余字节数，那可以直接将这个类型在该单位的空间中创建，如果大于剩余字节数，那么就会再创建一个单位空间对其进行存储。要注意的是，数组的字节数是以它其中一个成员的字节数为标准的。对齐补齐的意义就是可以节省空间，提高空间使用效率。比如图中这个，这些数据类型最大字节数为4，所以一个单位空间就是四个字节，那么我们可以看到第二排剩余一个字节的空间，而最后一排只使用一个字节，如果将最后一排的char类型放在第二排进行创建，那么就会节省四个字节的空间。</p>
+<p>union联合体使用时要注意每个时间只有一个成员在使用空间。</p>
+<h3 id="二十七、链式存储与顺序存储"><a href="#二十七、链式存储与顺序存储" class="headerlink" title="二十七、链式存储与顺序存储"></a>二十七、链式存储与顺序存储</h3><p>线性表是具有n个相同特性的数据元素的有限序列，他的数据结构包括链式存储和顺序存储。<br>顺序存储就是把线性表中的所有元素按照某种逻辑顺序，依次存储到从指定位置开始的一块连续的存储空间，比如我们学过的数组就是顺序存储。他的优点是可以快速的查找出表中任意位置的元素，缺点是插入和删除操作中需要移动大量的元素，那么效率就会很低。<br>链式存储又称为链表，他用一组任意存储单元存储线性表中的数据元素，包括数据域和指针域，数据域存数据，指针域指示其后继的信息。他的优点是插入和删除很方便，只需要修改数据邻节点的指向即可，缺点是查询代价较高，在查询任一元素时都需要从头节点开始遍历。</p>
+<h3 id="二十八、文件处理模型"><a href="#二十八、文件处理模型" class="headerlink" title="二十八、文件处理模型"></a>二十八、文件处理模型</h3><p>内存存储属于临时存储，如果不保存就会丢失，存储速度较快但存储容量较小，而外存存储属于长期存储，存储速度较慢但是容量较大。<br>文件存储类别包括二进制文件和文本文件，二进制文件是按照数据在内存中存储的原样存放的，而文本文件时通过字符编码进行存储。因此二进制文件的存储效率更高。<br>fopen函数在内存中开辟一个文件处理缓存区，我们可以定义一个文件类型的指针(FILE*)来指向缓存区，通用对缓存区的操作实现对内存中文件的读写和修改。我们通过fopen函数打开文件流，再通过fclose函数关闭文件流。</p>
+<h3 id="二十九、文件复制原理"><a href="#二十九、文件复制原理" class="headerlink" title="二十九、文件复制原理"></a>二十九、文件复制原理</h3><p>   文件复制我们先用fopen函数打开被复制文件和目标文件的缓冲区，在创建from和to两个文件类型的指针指向他们，我们还需创建一个buffer数组来当作中间的缓冲区。而后我们通过fread函数将在被复制文件中的数据先读到buffer数组中，然后再通过fwrite函数将buffer数组中的数据写入到目标文件，直至被复制文件内的光标到达尾部。</p>
+<h3 id="三十、组件化技术分类"><a href="#三十、组件化技术分类" class="headerlink" title="三十、组件化技术分类"></a>三十、组件化技术分类</h3><p> 静态库需要放到项目中，他会跟随项目一同打包为exe文件，所以如果exe用到的组件较多，那么他的文件体积会很大，并且每个程序的代码区都会有一份静态库，会造成空间浪费。他还不易更新，在更新时要将所有程序都更新一遍，他的优点就是移植方便。动态链接库是独立在exe外边的，它属于资源共享，谁想用谁就调用它即可，并且升级也很简单，只要更新自己就行，因为不需要打包在exe文件内，所以文件体积也会较小。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">WangTao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/">http://example.com/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">无限进步</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a></div><div class="post-share"><div class="social-share" data-image="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2023/11/02/STM32/Flash%E9%97%AA%E5%AD%98/" title="Flash闪存笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Flash闪存笔记</div></div><div class="info-2"><div class="info-item-1">一、Flash闪存（一）简介 STM32F1系列的FLASH包含程序存储器、系统存储器和选项字节三个部分，通过**闪存存储器接口(外设)**可以对程序存储器和选项字节进行擦除和编程  读写FLASH的用途：   利用程序存储器的剩余空间来保存掉电不丢失的用户数据 通过在程序中编程(IAP)，实现程序的自我更新   在线编程（In-Circuit Programming-ICP）用于更新程序存储器的全部内容它通过JTAG、SWD协议或系统加载程序（Bootloader）下载程序  在程序中编程(In-Application...</div></div></div></a><a class="pagination-related" href="/2024/09/01/FreeRTOS/FrreeRTOS%E7%AC%94%E8%AE%B0/" title="FreeRTOS学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">FreeRTOS学习笔记</div></div><div class="info-2"><div class="info-item-1">一、FreeRTOS源码概述1、入口函数在Core\Src\main.c的main函数里，初始化了FreeRTOS环境、创建了任务，然后启动调度器。源码如下： 123456/* Init scheduler */  osKernelInitialize();  /* 初始化FreeRTOS运行环境 */  MX_FREERTOS_Init();    /* 创建任务 */  /* Start scheduler */  osKernelStart();       /* 启动调度器 */  2、数据类型每个移植的版本都含有自己的portmacro.h头文件，里面定义了2个数据类型：  TickType_t： FreeRTOS配置了一个周期性的时钟中断：Tick Interrupt 每发生一次中断，中断次数累加，这被称为tick count tick...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WangTao</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/449096702"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/18232290771" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/449096702" target="_blank" title="Bilibili"><i class="fab fa-youtube" style="color: #24292e;"></i></a><a class="social-icon" href="https://pic.imgdb.cn/item/66f0ca68f21886ccc03a5df7.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">无线进步！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%8E%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%B0exe"><span class="toc-text">一、从源代码到exe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">二、基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AD%97%E7%AC%A6%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%9A%84%E6%98%BE%E7%A4%BA%E5%8E%9F%E7%90%86"><span class="toc-text">三、字符在屏幕上的显示原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%BA%A2%E5%87%BA%E7%8E%B0%E8%B1%A1"><span class="toc-text">四、溢出现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%BE%8B"><span class="toc-text">五、类型转换规律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98"><span class="toc-text">六、短路问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">七、指针变量类型的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%89%A9%E5%B1%95%E2%80%94%E2%80%94%E5%A4%9A%E7%BA%A7%E6%8C%87%E9%92%88"><span class="toc-text">八、指针类型的扩展——多级指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%89%A9%E5%B1%95%E2%80%94%E2%80%94%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84"><span class="toc-text">九、指针类型的扩展——指针数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%89%A9%E5%B1%95%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88"><span class="toc-text">十、指针类型的扩展——数组指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84-%E5%90%8D-%E7%89%B9%E6%80%A7"><span class="toc-text">十一、一维数组-名-特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84-%E5%90%8D-%E7%89%B9%E6%80%A7"><span class="toc-text">十二、二维数组-名-特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%A4%A7%E7%AB%AF%E5%AD%98%E5%82%A8-%E5%B0%8F%E7%AB%AF%E5%AD%98%E5%82%A8"><span class="toc-text">十三、大端存储-小端存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%87%BD%E6%95%B0%E5%9C%A8%E6%BA%90%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="toc-text">十四、函数在源代码中的三种状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E5%A0%86%E5%8C%BA%E4%B8%8E%E6%A0%88%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">十五、堆区与栈区的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="toc-text">十六、函数的执行原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%83%E3%80%81%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="toc-text">十七、枚举类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%85%AB%E3%80%81typedef"><span class="toc-text">十八、typedef</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81const"><span class="toc-text">二十、const</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81%E5%85%A8%E5%B1%80-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">二十一、全局&#x2F;局部变量生命周期与作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81static%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">二十二、static静态变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%89%E3%80%81extern"><span class="toc-text">二十三、extern</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81%E5%AE%8Fdefine"><span class="toc-text">二十四、宏define</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8E%9F%E7%90%86"><span class="toc-text">二十五、字符串原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%85%AD%E3%80%81struct%E4%B8%8Eunion%E7%BB%93%E6%9E%84%E4%BD%93%E8%81%94%E5%90%88%E4%BD%93"><span class="toc-text">二十六、struct与union结构体联合体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%83%E3%80%81%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8"><span class="toc-text">二十七、链式存储与顺序存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%85%AB%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%A8%A1%E5%9E%8B"><span class="toc-text">二十八、文件处理模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B9%9D%E3%80%81%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-text">二十九、文件复制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%8D%81%E3%80%81%E7%BB%84%E4%BB%B6%E5%8C%96%E6%8A%80%E6%9C%AF%E5%88%86%E7%B1%BB"><span class="toc-text">三十、组件化技术分类</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/23/hello-world/" title="Hello World">Hello World</a><time datetime="2025-03-23T05:33:20.044Z" title="发表于 2025-03-23 13:33:20">2025-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/01/FreeRTOS/FrreeRTOS%E7%AC%94%E8%AE%B0/" title="FreeRTOS学习笔记">FreeRTOS学习笔记</a><time datetime="2024-08-31T16:00:00.000Z" title="发表于 2024-09-01 00:00:00">2024-09-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/10/STM32/C%E8%AF%AD%E8%A8%80/" title="C语言笔记">C语言笔记</a><time datetime="2024-04-09T16:00:00.000Z" title="发表于 2024-04-10 00:00:00">2024-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/02/STM32/Flash%E9%97%AA%E5%AD%98/" title="Flash闪存笔记">Flash闪存笔记</a><time datetime="2023-11-01T16:00:00.000Z" title="发表于 2023-11-02 00:00:00">2023-11-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/20/STM32/WDG%E7%9C%8B%E9%97%A8%E7%8B%97/" title="WDG看门狗笔记">WDG看门狗笔记</a><time datetime="2023-10-20T00:00:00.000Z" title="发表于 2023-10-20 08:00:00">2023-10-20</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By WangTao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
