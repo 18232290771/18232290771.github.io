@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>无限进步</title><meta name="author" content="WangTao"><meta name="copyright" content="WangTao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="无限进步">
+<meta property="og:url" content="http://example.com/page/4/index.html">
+<meta property="og:site_name" content="无限进步">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg">
+<meta property="article:author" content="WangTao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/63aa8d0308b683016356202d.png"><link rel="canonical" href="http://example.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '无限进步',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">无限进步</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tag"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">无限进步</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/18232290771" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/449096702" target="_blank" title="Bilibili"><i class="fab fa-youtube" style="color: #24292e;"></i></a><a class="social-icon" href="https://pic.imgdb.cn/item/66f0ca68f21886ccc03a5df7.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/10/10/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/%E6%97%A0%E4%BA%BA%E6%9C%BA%E4%B8%B2%E7%BA%A7PID/" title="无人机串级PID"><img class="post-bg" src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无人机串级PID"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/10/10/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/%E6%97%A0%E4%BA%BA%E6%9C%BA%E4%B8%B2%E7%BA%A7PID/" title="无人机串级PID">无人机串级PID</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-10T00:00:00.000Z" title="发表于 2024-10-10 08:00:00">2024-10-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/">STM32代码实现</a></span></div><div class="content">无人机串级PID123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include &quot;pid.h&quot;#include &quot;myMath.h&quot;	/************************************************************** *批量复位PID函数 * @param[in]  * @param[out]  * @return      ***************************************************************/	void pidRest(PidObject **pid,const uint8_t len)&#123;	uint8_t i;	for(i=0;i&lt;len;i++)	&#123;	  	pid[i]-&gt;integ = 0;	...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/09/01/FreeRTOS/FrreeRTOS%E7%AC%94%E8%AE%B0/" title="FreeRTOS学习笔记"><img class="post-bg" src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FreeRTOS学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/01/FreeRTOS/FrreeRTOS%E7%AC%94%E8%AE%B0/" title="FreeRTOS学习笔记">FreeRTOS学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-31T16:00:00.000Z" title="发表于 2024-09-01 00:00:00">2024-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/FreeRTOS/">FreeRTOS</a></span></div><div class="content">一、FreeRTOS源码概述1、入口函数在Core\Src\main.c的main函数里，初始化了FreeRTOS环境、创建了任务，然后启动调度器。源码如下： 123456/* Init scheduler */  osKernelInitialize();  /* 初始化FreeRTOS运行环境 */  MX_FREERTOS_Init();    /* 创建任务 */  /* Start scheduler */  osKernelStart();       /* 启动调度器 */  2、数据类型每个移植的版本都含有自己的portmacro.h头文件，里面定义了2个数据类型：  TickType_t： FreeRTOS配置了一个周期性的时钟中断：Tick Interrupt 每发生一次中断，中断次数累加，这被称为tick count tick...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/04/10/STM32%E5%9F%BA%E7%A1%80/C%E8%AF%AD%E8%A8%80/" title="C语言笔记">C语言笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-09T16:00:00.000Z" title="发表于 2024-04-10 00:00:00">2024-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/STM32%E5%9F%BA%E7%A1%80/">STM32基础</a></span></div><div class="content">一、从源代码到exe知识点： 从源代码到exe要经过五个时期，分别为预处理期、编译期、汇编期、连接期和执行期。在预处理期，就是程序员在编写代码的过程。编译期中编译器将源代码变为汇编语言，汇编语言是计算机语言的助记符号。汇编期中汇编器将汇编语言变为机器语言.obj，也就是计算机能够识别的01指令，机器最终执行的就是机器语言.obj，也称为目标文件。连接期就是将库函数（头文件）与所有的机器语言进行打包。最终在执行期将打包好的文件变为exe可执行文件。如果出现语法错误，那就是在编译期出现了编译错误。如果产生LNK连接错误就是在连接期出现了问题，可能是找不到头文件造成的，也可能是写错了main函数，或者在一个项目中没有或者出现多个main函数。 二、基本数据类型 知识点： 基本数据类型可以分为整型、字符型和浮点型三大类，其中整型包括short,int,long,long long 4小类；字符型包括char一个小类；浮点型包括float,double,long double 3小类。不同类型的字节数：char  1   short  2   int  4   long  4  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/11/02/STM32%E5%9F%BA%E7%A1%80/Flash%E9%97%AA%E5%AD%98/" title="Flash闪存笔记">Flash闪存笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-01T16:00:00.000Z" title="发表于 2023-11-02 00:00:00">2023-11-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/STM32%E5%9F%BA%E7%A1%80/">STM32基础</a></span></div><div class="content">一、Flash闪存（一）简介 STM32F1系列的FLASH包含程序存储器、系统存储器和选项字节三个部分，通过**闪存存储器接口(外设)**可以对程序存储器和选项字节进行擦除和编程  读写FLASH的用途：   利用程序存储器的剩余空间来保存掉电不丢失的用户数据 通过在程序中编程(IAP)，实现程序的自我更新   在线编程（In-Circuit Programming-ICP）用于更新程序存储器的全部内容它通过JTAG、SWD协议或系统加载程序（Bootloader）下载程序  在程序中编程(In-Application...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/20/STM32%E5%9F%BA%E7%A1%80/WDG%E7%9C%8B%E9%97%A8%E7%8B%97/" title="WDG看门狗笔记">WDG看门狗笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-20T00:00:00.000Z" title="发表于 2023-10-20 08:00:00">2023-10-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/STM32%E5%9F%BA%E7%A1%80/">STM32基础</a></span></div><div class="content">一、WDG看门狗（一）简介 WDG(Watchdog)看门狗  看门狗可以监控程序的运行状态，当程序因为设计漏洞（无法预料）、硬件故障、电磁干扰等原因，出现卡死或跑飞现象时，看门狗能及时复位程序避免程序陷入长时间的罢工状态，保证系统的可靠性和安全性  **看门狗本质上是一个定时器，**当指定时间范围内，程序没有执行喂狗(重置计数器)操作时，看门狗硬件电路就自动产生复位信号  STM32内置两个看门狗   独立看门狗(IWDG)：独立工作，对时间精度要求较低 窗口看门狗(WWDG)：要求看门狗在精确计时窗口起作用（有明确喂狗清零界限）    （二）IWDG框图1、简介  对比定时器结构。定时器产生中断，看门狗产生复位。 2、IWDG键寄存器 键寄存器本质上是控制寄存器，用于控制硬件电路的工作  在可能存在干扰的情况下，一般通过在整个键寄存器写入特定值来代替控制寄存器写入一位的功能，以降低硬件电路受到干扰的概率（恶劣情况）       （三）IWDG超时时间 超时时间：TIWDG&#x3D;TLSI x PR预分频系数 x (RL+1) 其中：TLSI...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/15/STM32%E5%9F%BA%E7%A1%80/PWR%E7%94%B5%E6%BA%90%E6%8E%A7%E5%88%B6/" title="PWR电源控制笔记">PWR电源控制笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-15T00:00:00.000Z" title="发表于 2023-10-15 08:00:00">2023-10-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/STM32%E5%9F%BA%E7%A1%80/">STM32基础</a></span></div><div class="content">一、PWR电源控制（一）简介 PWR(Power...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic1.imgdb.cn/item/67dfb24188c538a9b5c50a54.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">WangTao</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/449096702"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/18232290771" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/449096702" target="_blank" title="Bilibili"><i class="fab fa-youtube" style="color: #24292e;"></i></a><a class="social-icon" href="https://pic.imgdb.cn/item/66f0ca68f21886ccc03a5df7.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">无线进步！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/16/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/Flash%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96/" title="Flash使用优化"><img src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flash使用优化"/></a><div class="content"><a class="title" href="/2025/04/16/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/Flash%E4%BD%BF%E7%94%A8%E4%BC%98%E5%8C%96/" title="Flash使用优化">Flash使用优化</a><time datetime="2025-04-15T16:00:00.000Z" title="发表于 2025-04-16 00:00:00">2025-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/10/YOLO/AprilTag%E5%AE%9A%E4%BD%8D/" title="AprilTag定位"><img src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AprilTag定位"/></a><div class="content"><a class="title" href="/2025/04/10/YOLO/AprilTag%E5%AE%9A%E4%BD%8D/" title="AprilTag定位">AprilTag定位</a><time datetime="2025-04-09T16:00:00.000Z" title="发表于 2025-04-10 00:00:00">2025-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/01/YOLO/ArUco%E5%AE%9A%E4%BD%8D/" title="ArUco定位"><img src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ArUco定位"/></a><div class="content"><a class="title" href="/2025/04/01/YOLO/ArUco%E5%AE%9A%E4%BD%8D/" title="ArUco定位">ArUco定位</a><time datetime="2025-03-31T16:00:00.000Z" title="发表于 2025-04-01 00:00:00">2025-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/20/ROS/URDF%E4%B8%8ETF%E8%BD%AC%E6%8D%A2/" title="URDF与TF转化"><img src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="URDF与TF转化"/></a><div class="content"><a class="title" href="/2025/03/20/ROS/URDF%E4%B8%8ETF%E8%BD%AC%E6%8D%A2/" title="URDF与TF转化">URDF与TF转化</a><time datetime="2025-03-19T16:00:00.000Z" title="发表于 2025-03-20 00:00:00">2025-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/18/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/%E4%B8%A4%E8%BD%AE%E5%B7%AE%E9%80%9F%E8%BF%90%E5%8A%A8%E5%AD%A6%E8%A7%A3%E7%AE%97/" title="两轮差速运动学解算"><img src="https://pic1.imgdb.cn/item/63a83a5408b68301634bd72b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="两轮差速运动学解算"/></a><div class="content"><a class="title" href="/2025/03/18/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/%E4%B8%A4%E8%BD%AE%E5%B7%AE%E9%80%9F%E8%BF%90%E5%8A%A8%E5%AD%A6%E8%A7%A3%E7%AE%97/" title="两轮差速运动学解算">两轮差速运动学解算</a><time datetime="2025-03-17T16:00:00.000Z" title="发表于 2025-03-18 00:00:00">2025-03-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FreeRTOS/"><span class="card-category-list-name">FreeRTOS</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/HEXO/"><span class="card-category-list-name">HEXO</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ROS/"><span class="card-category-list-name">ROS</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/STM32%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/"><span class="card-category-list-name">STM32代码实现</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/STM32%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">STM32基础</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/YOLO/"><span class="card-category-list-name">YOLO</span><span class="card-category-list-count">5</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ArUco/" style="font-size: 1.1em; color: #999">ArUco</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/YOLO/" style="font-size: 1.23em; color: #999ea6">YOLO</a> <a href="/tags/STM32/" style="font-size: 1.5em; color: #99a9bf">STM32</a> <a href="/tags/ROS2-Humble/" style="font-size: 1.37em; color: #99a4b2">ROS2 Humble</a> <a href="/tags/CUDA/" style="font-size: 1.1em; color: #999">CUDA</a> <a href="/tags/FreeRTOS/" style="font-size: 1.1em; color: #999">FreeRTOS</a> <a href="/tags/HEXO/" style="font-size: 1.1em; color: #999">HEXO</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.1em; color: #999">C语言</a> <a href="/tags/AprilTag/" style="font-size: 1.1em; color: #999">AprilTag</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/ROS-Noetic/" style="font-size: 1.23em; color: #999ea6">ROS Noetic</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">35</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">53.6k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-18T09:42:01.439Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By WangTao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["落霞与孤鹜齐飞，秋水共长天一色。","欲买桂花同载酒，终不似，少年游。","春江潮水连海平，海上明月共潮生。","天若有情天亦老，人间正道是沧桑。"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["落霞与孤鹜齐飞，秋水共长天一色。","欲买桂花同载酒，终不似，少年游。","春江潮水连海平，海上明月共潮生。","天若有情天亦老，人间正道是沧桑。"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
